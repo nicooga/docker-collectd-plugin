@@ -340,6 +340,8 @@ class DockerPlugin:
 
 # Command-line execution
 if __name__ == '__main__':
+    sys.stdout.flush()
+
     class ExecCollectdValues:
         def dispatch(self):
             if not getattr(self, 'host', None):
